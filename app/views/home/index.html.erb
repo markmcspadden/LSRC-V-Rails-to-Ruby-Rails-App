@@ -1,1 +1,8 @@
 <h2>Schedule:</h2>
+
+<dl>
+  <% @schedule_items.each do |item| %>
+    <dt><%= display_time item.start_at %> - <%= display_time item.end_at %></dt>
+    <dd><%= item.title %></dd>
+  <% end %>
+</dl>
