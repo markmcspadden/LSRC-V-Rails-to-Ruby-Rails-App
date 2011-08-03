@@ -1,8 +1,15 @@
+<div class="actions">
+  <%= link_to "Raise your hand", "#", :confirm => "Now replace this link with 'Put your hand down'" %> 
+</div>
+
 <h2>Schedule:</h2>
 
 <dl>
   <% @schedule_items.each do |item| %>
     <dt><%= display_time item.start_at %> - <%= display_time item.end_at %></dt>
-    <dd><%= item.title %></dd>
+    <dd>
+      <%= item.title %>
+      <%= rate item %>
+    </dd>
   <% end %>
 </dl>

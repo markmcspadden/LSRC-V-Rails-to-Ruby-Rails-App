@@ -10,6 +10,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
+      <th>Rate</th>
       <th>Attended?</th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
         <td><%= attendee.name %></td>
         <td><%= mail_to attendee.email %></td>
         <td><%= attendee.phone %></td>
+        <td><%= rate attendee %></td>
         <td><%= check_box_tag "dom_id(attendee)}_attended", 1, attendee.attended %></td>
       </tr>
     <% end %>
