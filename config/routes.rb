@@ -3,6 +3,7 @@ Dashboard::Application.routes.draw do
   # first created -> highest priority.
 
   match '/home' => 'home#index'
+  match '/communications' => 'home#communications', :as => :communications
 
   match '/attendees' => 'attendees#index'
 

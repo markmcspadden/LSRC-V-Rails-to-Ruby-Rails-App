@@ -23,6 +23,9 @@ body {
 #nav a:hover {
   color: #880000;
 }
+#nav a.current {
+  color: #880000;
+}
 
 #main {
   margin: 10px 0;

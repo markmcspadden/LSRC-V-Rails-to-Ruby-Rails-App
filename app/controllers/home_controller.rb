@@ -4,4 +4,8 @@ class HomeController < ApplicationController
     @schedule_items = ScheduleItem.all
   end
   
+  def communications
+    
+  end
+  
 end
