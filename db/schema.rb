@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803042436) do
+ActiveRecord::Schema.define(:version => 20110803050422) do
 
   create_table "attendees", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110803042436) do
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "attended",   :default => false
   end
 
   create_table "schedule_items", :force => true do |t|

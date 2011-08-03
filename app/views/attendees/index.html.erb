@@ -1,11 +1,16 @@
 <h2>Roster</h2>
 
+<div class="actions">
+  <%= link_to "Load in New CSV", "#", :confirm => "Are you sure? This will delete your current Roster and load this File in as your New Roster." %>
+</div>
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
+      <th>Attended?</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +19,7 @@
         <td><%= attendee.name %></td>
         <td><%= mail_to attendee.email %></td>
         <td><%= attendee.phone %></td>
+        <td><%= check_box_tag "dom_id(attendee)}_attended", 1, attendee.attended %></td>
       </tr>
     <% end %>
   </tbody>
