@@ -1,0 +1,24 @@
+<h2>Roster</h2>
+
+<div class="actions">
+  <%= link_to "Send Corral SMS", "#", :confirm => "Are you sure? This will send an SMS to everyone on the Roster." %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr>
+        <td><%= attendee.name %></td>
+        <td><%= mail_to attendee.email %></td>
+        <td><%= attendee.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

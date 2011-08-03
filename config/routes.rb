@@ -4,6 +4,8 @@ Dashboard::Application.routes.draw do
 
   match '/home' => 'home#index'
 
+  match '/attendees' => 'attendees#index'
+
   root :to => 'home#index'
 
   # Sample of regular route:
