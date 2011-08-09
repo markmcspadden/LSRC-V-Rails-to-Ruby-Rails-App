@@ -1,0 +1,36 @@
+<h1>Listing schedule_items</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Type</th>
+    <th>Difficulty</th>
+    <th>Start At</th>
+    <th>End At</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @schedule_items.each do |schedule_item| %>
+  <tr>
+    <td><%= schedule_item.title %></td>
+    <td><%= schedule_item.schedule_item_type %></td>
+    <td><%= schedule_item.schedule_item_level %></td>        
+    <td><%= schedule_item.start_at %></td>
+    <td><%= schedule_item.end_at %></td>
+    <td><%= link_to 'Show', schedule_item %></td>
+    <td><%= link_to 'Edit', edit_schedule_item_path(schedule_item) %></td>
+    <td><%= link_to 'Destroy', schedule_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Schedule Item', new_schedule_item_path %>
+
+<hr/>
+
+<%= link_to "Schedule Type Admin", schedule_item_types_path %>
+<%= link_to "Schedule Level Admin", schedule_item_levels_path %>

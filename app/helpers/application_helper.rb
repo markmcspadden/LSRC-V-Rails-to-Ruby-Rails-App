@@ -6,7 +6,7 @@ module ApplicationHelper
   
   def current_nav?(path)
     c, p = path.split("#")
-    "current" if controller.controller_name == c && controller.action_name == p
+    "current" if controller.controller_name == c && (p.blank? || controller.action_name == p)
   end
   
   def rate(item)

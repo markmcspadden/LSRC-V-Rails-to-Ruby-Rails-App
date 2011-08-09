@@ -1,0 +1,2 @@
+module ScheduleItemTypesHelper
+end

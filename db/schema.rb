@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803050422) do
+ActiveRecord::Schema.define(:version => 20110809045851) do
 
   create_table "attendees", :force => true do |t|
     t.string   "name"
@@ -21,12 +21,26 @@ ActiveRecord::Schema.define(:version => 20110803050422) do
     t.boolean  "attended",   :default => false
   end
 
+  create_table "schedule_item_levels", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_item_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "schedule_items", :force => true do |t|
     t.string   "title"
     t.datetime "start_at"
     t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "schedule_item_type_id"
+    t.integer  "schedule_item_level_id"
   end
 
 end

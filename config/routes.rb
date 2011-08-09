@@ -1,4 +1,11 @@
 Dashboard::Application.routes.draw do
+  
+  resources :schedule_items
+  resources :schedule_item_levels
+  resources :schedule_item_types
+  
+  match '/schedule' => 'schedule_items#index', :as => :schedule
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
