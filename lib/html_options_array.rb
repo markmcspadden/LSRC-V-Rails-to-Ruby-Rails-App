@@ -8,8 +8,8 @@ module HtmlOptionsArray
     # end
     eval <<-EOS
       def self.html_options_array
-        all.to_a.collect do |t|
-          [t.__send__("#{method_1}".to_sym), t.__send__("#{method_2}".to_sym)]
+        all.collect do |t|
+          [t.#{method_1.to_s}, t.#{method_2.to_s}]
         end
       end
     EOS

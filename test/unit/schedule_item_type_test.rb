@@ -2,6 +2,10 @@ require 'test_helper'
 
 class ScheduleItemTypeTest < ActiveSupport::TestCase
   
+  test "presence of ScheduleItemType.html_options_array" do
+    assert ScheduleItemType.respond_to?(:html_options_array)
+  end
+  
   test "ScheduleItemType.html_options_array" do
     ScheduleItemType.destroy_all
     ["Type 1", "Type 2"].each { |t| ScheduleItemType.create(:name => t) }

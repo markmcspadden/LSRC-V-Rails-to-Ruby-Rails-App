@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ScheduleItemLevelTest < ActiveSupport::TestCase
+  test "presence of ScheduleItemType.html_options_array" do
+    assert ScheduleItemType.respond_to?(:html_options_array)
+  end
+  
   test "ScheduleItemLevel.html_options_array" do
     ScheduleItemLevel.destroy_all
     ["Level 1", "Level 2", "Level 3"].each { |t| ScheduleItemLevel.create(:name => t) }
