@@ -1,0 +1,1 @@
+require "extend_action_view"
